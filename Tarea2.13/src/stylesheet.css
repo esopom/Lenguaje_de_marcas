@@ -1,0 +1,18 @@
+h2{
+    color: rgb(62, 129, 62);
+}
+
+fieldset{
+    background-color: rgb(197, 191, 191);
+}
+
+legend{
+    background-color: rgb(68, 67, 67);
+    color: aliceblue;
+}
+
+.boton{
+    color: green;
+    border-radius: 0%;
+    border-color:green ;
+}

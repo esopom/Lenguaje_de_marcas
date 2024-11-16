@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <h2>Solicitud de información de ciclos</h2>
+        <form action="">
+            <fieldset form="formularioPrincipal" title="Hola">
+                <legend>Completar este formulario</legend>
+                <label for="colorFav"> Seleccione su color favorito: </label>
+                <input type="color" name="colorFav" id="colorFav">
+                <br><br>
+                <label for="lenguageProg">Seleccione el luenguaje de programación: </label>
+                <select name="lenguageProg" id="lenguageProg">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="VB">Visual Basic</option>
+                </select>
+                <br><br>
+                <label for="ciclos">Marque los ciclos en los que está interesado: </label>
+                <input type="checkbox" name="ciclos" id="ciclos" value="DAM">DAM
+                <input type="checkbox" name="ciclos" id="ciclos" value="DAW">DAW
+                <input type="checkbox" name="ciclos" id="ciclos" value="ASIR">ASIR
+                <br><br>
+                <label for="infoAdd" >Información adicional:</label><br>
+                <textarea name="infoAdd" id="textoAdicional" rows=10 cols="50" placeholder="Escriba aquí..."></textarea>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Rellene las opciones siguientes</legend>
+                <label for="fechaComienzo">Seleccione fecha de comienzo: </label>
+                <input type="date" name="fechaComienzo" id="fechaComienzo">
+                <br><br>
+                <label for="CV">Adjunte se CV:</label>
+                <input type="file" name="CV" id="CV">
+                <br><br>
+                <label for="ciclo">Seleccione su ciclo prioritario</label>
+                <br>
+                <select name="ciclos" id="ciclo" size="4">
+                    <option value="DAM">DAM</option>
+                    <option value="DAW">DAW</option>
+                    <option value="ASIR">ASIR</option>
+                    <option value="SMIR">SMIR</option>
+                </select>
+                
+                
+            </fieldset>
+            <br><br>
+            <input type="submit" value="Enviar" class="boton">
+            <input type="reset" value="Resetear" class="boton">
+            
+        </form>
+    </body>
+</html>
