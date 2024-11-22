@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tarea 2.14</title>
+        <meta charset="UTF-8">
+        <script>
+            function calcular(operacion) {
+                var op1 = parseFloat(document.getElementById('op1').value);
+                var op2 = parseFloat(document.getElementById('op2').value);
+                var resultado;
+                
+                switch(operacion) {
+                    case '+': resultado = op1 + op2; 
+                        break;
+                    case '-': resultado = op1 - op2; 
+                        break;
+                    case '*': resultado = op1 * op2; 
+                        break;
+                    case '/': resultado = op1 / op2; 
+                        break;
+                }
+                
+                document.getElementById('resultado').innerHTML =  "Resultado = " + resultado;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Calculadora Simple</h1>
+        <form action="" method="">
+            <label for="op1">Introduzca operando1:</label>
+            <input type="number" name="op1" id="op1" required>
+            <br>
+            <label for="op2">Introduzca operando2:</label>
+            <input type="number" name="op2" id="op2" required>
+            <br><br>
+            <label for="operacion">Seleccione la operación a realizar:</label>
+            <br><br>
+            <button type="button" id="suma" onclick="calcular('+')">+</button> 
+            <button type="button" id="resta" onclick="calcular('-')">-</button> 
+            <button type="button" id="multi" onclick="calcular('*')">*</button> 
+            <button type="button" id="divi" onclick="calcular('/')">/</button> 
+            <p id="resultado">Resultado: </p>
+            <input type="reset" value="Borrar" class="boton">
+        </form>
+</html>
