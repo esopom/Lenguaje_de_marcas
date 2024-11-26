@@ -4,7 +4,15 @@
         <title>Tarea2.15</title>
         <meta charset="UTF-8">
         <script>
-
+            function calcular() {
+                //Añadimos || 0 para que si no hay un valor introducido, cuente como un 0
+                var dias = parseInt(document.getElementById('dias').value) || 0;
+                var mesesEnDias = parseInt(document.getElementById('meses').value)*31 || 0;
+                var aniosEnDias = parseInt(document.getElementById("años").value)*365 || 0;
+                var resultado = dias+mesesEnDias+aniosEnDias;
+                
+                document.getElementById('resultado').innerHTML = "Resultado = " + resultado + " días";
+            }
         </script>
     </head>
 
@@ -17,6 +25,10 @@
             <input type="number" name="meses" id="meses">
             <label for="años">Introduzca los años:</label>
             <input type="number" name="años" id="años">
+            <br>
+            <p id="resultado">Resultado: </p>
+            <button type="button" onclick="calcular()">Calcular</button> 
+            <input type="reset" value="Borrar" class="boton">
         </form>
     </body>
 </html>
