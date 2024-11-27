@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="UTF-8">
     <script>
         function mostrarTabla() {
@@ -9,15 +10,18 @@
             const max =  parseInt( document.getElementById('numMax').value) 
             const numTablaMax = parseInt(document.getElementById('tablaMax').value)
             let resultado = ''
-            for(i = numTabla; i<= numTablaMax; i++){
-                resultado += `Tabla del: ${i}<br>`
-                for ( j = 0; j <= max; j++) {
-                    resultado += `${j} X ${i} = ${j * numTabla}<br>`
-                    
+
+            if(numTabla<max){
+                for(i = numTabla; i<= numTablaMax; i++){
+                    resultado += `<h3>Tabla del: ${i}</h3><br>`
+                    for ( j = 0; j <= max; j++) {
+                        resultado += `${j} X ${i} = ${j * numTabla}<br>`
+                    }
                 }
+                document.getElementById('tabla').innerHTML = resultado
+            }else{
+                alert("El numero del primer campo debe de ser menor")
             }
-            
-            document.getElementById('tabla').innerHTML = resultado
         }
     </script>
 </head>
@@ -38,7 +42,6 @@
             <button type="button" name="muestraTabla" id="muestraTabla" onclick="mostrarTabla()">Muestra tabla</button>
             <br><br>
             <button type="reset">Limpiar</button>
-            
         </form>
         <p id="tabla" name="tabla">Resultado:</p>
     </main>
