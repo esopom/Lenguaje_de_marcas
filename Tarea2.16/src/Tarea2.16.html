@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function mostrarTabla() {
+            const numTabla = parseInt(document.getElementById('numTablas').value)
+            const max =  parseInt( document.getElementById('numMax').value) 
+            
+            let resultado = `Tabla del: ${numTabla}<br>`
+
+            for ( i = 0; i <= max; i++) {
+                resultado += `${i} X ${numTabla} = ${i * numTabla}<br>`
+                
+            }
+            document.getElementById('tabla').innerHTML = resultado
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Generador de tablas de multiplicar</h1>
+        <form action="">
+            <label for="numTabla">Introduzca la tabla que quiere visualizar: </label>
+            <input type="number" name="numTablas" id="numTablas">
+            <br><br>
+            <label for="numMax">Introduzca el valor máximo por el que desea ver la tabla: </label>
+            <input type="number" name="numMax" id="numMax">
+            <br><br>
+            <button type="button" name="muestraTabla" id="muestraTabla" onclick="mostrarTabla()">Muestra tabla</button>
+            <br><br>
+            <button type="reset">Limpiar</button>
+        </form>
+        <p id="tabla" name="tabla">Resultado:</p>
+    </main>
+</body>
+
+</html>
